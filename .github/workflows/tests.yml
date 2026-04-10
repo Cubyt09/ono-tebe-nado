@@ -11,11 +11,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Check if the repository is private
-        if: ${{github.event.repository.private}}
-        run: exit 1
       - name: Tests
         uses: Yandex-Practicum/test-project-action@v1
         with:
